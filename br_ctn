@@ -1,0 +1,32 @@
+#!/bin/bash
+
+SUM=0
+while [ true ]
+do
+	echo -n "Please input number 1-9, except 5, (q-quit).."; read INPUT
+	if [ "$INPUT" == "" ]
+	then
+		echo "Please input number again.."
+		continue
+	elif [ "$INPUT" == "q" ]
+	then
+		echo "Break loop now!"
+		break
+	elif [ $INPUT -eq 5 ]
+	then
+		echo "Please not input 5"
+		continue
+	elif [ $INPUT -lt 1 ]
+	then
+		echo "Please input data > 1"
+		continue
+	elif [ $INPUT -gt 9 ]
+	then
+		echo "Please input data < 9"
+		continue
+	fi
+
+	SUM=`expr $SUM + $INPUT`
+done
+
+	echo "SUM is $SUM....."

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+SUM=0
+i=1
+
+while [ $i -le 10 ]  
+do
+	SUM=`expr $SUM + $i`
+	i=`expr $i + 1`
+done
+
+	echo "SUM is $SUM..."

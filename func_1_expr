@@ -1,0 +1,14 @@
+#!/bin/bash
+
+function sum {
+
+	s=0
+	for i in `seq 1 $1`
+	do
+		s=`expr $s + $i`
+	done
+	echo $s
+
+}
+
+sum 10
